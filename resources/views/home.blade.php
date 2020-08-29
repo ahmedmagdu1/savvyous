@@ -1,4 +1,4 @@
-@extends('layouts.app')
+@extends('includes.header')
 
 @section('content')
 <div class="container">
@@ -20,4 +20,13 @@
         </div>
     </div>
 </div>
+<div id="main" class="row">
+
+          @yield('content')
+
+  </div>
+
+
+
+@include('includes.footer')
 @endsection

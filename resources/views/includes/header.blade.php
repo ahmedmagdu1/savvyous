@@ -1,30 +1,37 @@
 <!doctype html>
-<html lang="en">
+<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="">
     <meta name="author" content="">
-    <link rel="icon" href="/docs/4.0/assets/img/favicons/favicon.ico">
+    <link rel="icon" href="images/favicon.ico">
 
-    <title>savvyous</title>
+    <!-- CSRF Token -->
+    <meta name="csrf-token" content="{{ csrf_token() }}">
+
+    <title>{{ config('app.name', 'Laravel') }}</title>
 
     <link rel="canonical" href="https://savvyous.com">
 
     <!-- Bootstrap core CSS -->
-    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="{{ asset('css/bootstrap.min.css') }}" rel="stylesheet">
 
     <!-- Custom styles for this template -->
-    <link href="css/style.css" rel="stylesheet">
-	
+    <link href="{{ asset('css/style.css') }}" rel="stylesheet">
+
+    <!-- Fonts -->
+    <link rel="dns-prefetch" href="//fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
+
 	   <!-- Font Awesome 4.7.0 -->
-    <link href="css/font-awesome.min.css" rel="stylesheet">
+    <link href="{{ asset('css/font-awesome.min.css') }}" rel="stylesheet">
   </head>
   <body>
 
     <header>
 <nav class="navbar navbar-icon-top navbar-expand-lg navbar-dark bg">
-  <a class="navbar-brand" href="#"><img src="images/logo/white-logo.png"/></a>
+  <a class="navbar-brand" href="#"><img src="{{ asset('images/logo/white-logo.png') }}"/></a>
     <form class="form-inline">
   <div class="form-group col-auto has-search">
     <span class="fa fa-search form-control-feedback"></span>
@@ -69,8 +76,8 @@
 
       </li>
     </ul>
-	
-	
+
+
     <ul class="navbar-nav  ">
       <li class="nav-item">
         <a class="nav-link" href="#">
@@ -84,5 +91,7 @@
 
   </div>
 </nav>
-
+<main class="py-4">
+    @yield('content')
+</main>
     </header>

@@ -4,13 +4,13 @@
 		<div class="col-md-6">
 		<div class="row">
 		<div class="col-md-3">
-		<img class="img-fluid footer-logo" src="images/logo/savvyous-logo.png" alt="Savvyous">
+		<img class="img-fluid footer-logo" src="{{ asset('images/logo/savvyous-logo.png') }}" alt="Savvyous">
 		</div>
 		<div class="col-md-9">
 		<h3>Connecting<br>Bright Minds</h3>
 		</div>
 		</div>
-		
+
 		</div>
 		<div class="col-md-3 ">
 		<ul class="list-unstyled">
@@ -19,7 +19,7 @@
 		<li><a href="#">Cookies Policy</a></li>
 		</ul>
 		</div>
-		
+
 		<div class="col-md-3">
 		<ul class="list-unstyled">
 		<li><a href="#">Blogs</a></li>
@@ -27,9 +27,9 @@
 		<li><a href="#">About us</a></li>
 		</ul>
 		</div>
-		
-		
-	  
+
+
+
 	  </div>
       </footer>
     </main>
